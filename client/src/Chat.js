@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io.connect(`${window.location.hostname}:${8080}`);
+const socket = io.connect(window.location.hostname);
 
 const Chat = () => {
 	let [ value, setValue ] = useState('');

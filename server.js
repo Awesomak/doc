@@ -3,8 +3,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
-const io = require('socket.io')(8080);
+const server = app.listen(port, () => console.log(`Server started on port ${port}`));
+const io = require('socket.io')(server);
 
 //Production settings
 if (process.env.NODE_ENV === 'production') {
