@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://192.168.0.107:5000');
+const socket = io('http://localhost:5000');
 
 const Chat = () => {
 	let [ value, setValue ] = useState('');
@@ -38,7 +38,7 @@ const Chat = () => {
 				onKeyDown={handleKey}
 				value={value}
 				rows="20"
-				cols="200"
+				cols="100"
 			/>
 		</div>
 	);
