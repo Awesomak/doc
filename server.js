@@ -1,4 +1,5 @@
-const io = require('socket.io')(5000);
+const port = process.env.PORT || 5000;
+const io = require('socket.io')(port);
 
 let message = [ '' ];
 let pos = message.length - 1;
