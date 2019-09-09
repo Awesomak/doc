@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
 const port = process.env.PORT || 5000;
-var socket = io.connect(`${window.location.hostname}:${port}`);
+const socket = io.connect(`${window.location.hostname}:${port}`);
+console.log(`${window.location.hostname}:${port}`);
 
 const Chat = () => {
 	let [ value, setValue ] = useState('');
